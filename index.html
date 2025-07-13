@@ -1,0 +1,258 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blizzard Tech Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <img src="logo.png" alt="Blizzard Tech Logo" id="logo">
+            <h1>Blizzard Tech Shop</h1>
+        </div>
+        <div class="middle-bar">
+            <button class="categories-btn">Categories</button>
+            <div class="search-container">
+                <input type="text" placeholder="Search for products...">
+                <button class="search-btn" aria-label="Search">
+                    <img src="search-icon.png" alt="Search Icon">
+                </button>
+            </div>
+            <div class="user-actions">
+                <a href="#" class="find-store">
+                    <img src="location-icon.png" alt="Find Store Icon">
+                    <span>Find a Store</span>
+                </a>
+                <button class="login-btn">Log In</button>
+                <a href="#" class="user-profile" style="display: none;" aria-label="User Profile">
+                    <img src="user-profile.png" alt="User Profile">
+                </a>
+            </div>
+        </div>
+        <nav class="bottom-bar">
+            <ul>
+                <li><a href="#shop" class="nav-page-link" data-section="shop">Home</a></li>
+                <li><a href="#shop" class="nav-page-link" data-section="shop">Shop</a></li>
+                <li><a href="#cart" class="nav-page-link" data-section="cart">Cart</a></li>
+                <li><a href="#account" class="nav-page-link" data-section="account">My Account</a></li>
+                <li><a href="#blog" class="nav-page-link" data-section="blog">Blog</a></li>
+                <li><a href="#contact" class="nav-page-link" data-section="contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="shop" class="page-section">
+             <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="product_laptop_stand.png" alt="Cryo-Cooler Laptop Stand">
+                    </div>
+                    <h2>Cryo-Cooler Laptop Stand</h2>
+                    <p class="description">Keep your tech frosty with this AI-optimized cooling stand. Made from arctic crystals.</p>
+                    <div class="price-container">
+                        <span class="price">$129.99</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="product_power_bank.png" alt="Arctic-Core Power Bank">
+                    </div>
+                    <h2>Arctic-Core Power Bank</h2>
+                    <p class="description">Never run out of juice with our sub-zero power core. Compact, cool, and powerful.</p>
+                    <div class="price-container">
+                        <span class="price">$79.99</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="product_mouse.png" alt="Sub-Zero Wireless Mouse">
+                    </div>
+                    <h2>Sub-Zero Wireless Mouse</h2>
+                    <p class="description">Experience precision and comfort with this ergonomic mouse. Glides like it's on ice.</p>
+                    <div class="price-container">
+                        <span class="price">$89.99</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="product_screen_protector.png" alt="Glacier-Glass Screen Protector">
+                    </div>
+                    <h2>Glacier-Glass Protector</h2>
+                    <p class="description">Protect your screen with the strength of a glacier. Crystal clear and scratch-proof.</p>
+                    <div class="price-container">
+                        <span class="price">$49.99</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cart" class="page-section" style="display: none;">
+            <h2>Your Cart</h2>
+            <div class="cart-container">
+                <div class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                     <div class="cart-item">
+                        <img src="product_mouse.png" alt="Sub-Zero Wireless Mouse">
+                        <div class="item-details">
+                            <h3>Sub-Zero Wireless Mouse</h3>
+                            <span class="item-price">$89.99</span>
+                            <div class="quantity-selector">
+                                <label for="quantity-1">Qty:</label>
+                                <input type="number" id="quantity-1" value="1" min="1">
+                            </div>
+                        </div>
+                        <button class="remove-item-btn">Remove</button>
+                    </div>
+                     <div class="cart-item">
+                        <img src="product_laptop_stand.png" alt="Cryo-Cooler Laptop Stand">
+                        <div class="item-details">
+                            <h3>Cryo-Cooler Laptop Stand</h3>
+                            <span class="item-price">$129.99</span>
+                             <div class="quantity-selector">
+                                <label for="quantity-2">Qty:</label>
+                                <input type="number" id="quantity-2" value="1" min="1">
+                            </div>
+                        </div>
+                        <button class="remove-item-btn">Remove</button>
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <h3>Summary</h3>
+                    <div class="summary-line">
+                        <span>Subtotal</span>
+                        <span>$219.98</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Shipping</span>
+                        <span>$10.00</span>
+                    </div>
+                    <div class="summary-line total">
+                        <span>Total</span>
+                        <span>$229.98</span>
+                    </div>
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="account" class="page-section" style="display: none;">
+            <h2>My Account</h2>
+            <p>Welcome back! Manage your account details, view past orders, and track your shipments here.</p>
+            <!-- Account details will go here -->
+        </section>
+
+        <section id="blog" class="page-section" style="display: none;">
+            <h2>The Blizzard Blog</h2>
+            <div class="blog-grid">
+                <article class="blog-post">
+                    <img src="blog_post_image.png" alt="Tech Innovation">
+                    <h3>The Future is Frosty: How Cryo-Tech is Changing Everything</h3>
+                    <p class="post-meta">By Alex Frost | Oct 26, 2024</p>
+                    <p>From AI-powered cooling systems to next-generation data storage, sub-zero technology is no longer science fiction. Discover the coolest innovations happening right now...</p>
+                    <a href="#" class="read-more-btn">Read More</a>
+                </article>
+                <article class="blog-post">
+                    <img src="blog_post_image.png" alt="Gaming Setup">
+                    <h3>Building the Ultimate Ice-Themed Gaming Rig</h3>
+                    <p class="post-meta">By Casey Iceberg | Oct 22, 2024</p>
+                    <p>Want a setup that's as cool as your gameplay? We walk you through the best components, peripherals, and lighting to create a stunning, frosty battlestation.</p>
+                    <a href="#" class="read-more-btn">Read More</a>
+                </article>
+                 <article class="blog-post">
+                    <img src="blog_post_image.png" alt="Productivity Tips">
+                    <h3>Stay Cool Under Pressure: Tech for Peak Productivity</h3>
+                    <p class="post-meta">By Dr. Evelyn Reed | Oct 18, 2024</p>
+                    <p>Your environment impacts your focus. Learn how our ergonomic and cooling-focused products can help you maintain performance during intense work sessions.</p>
+                    <a href="#" class="read-more-btn">Read More</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="page-section" style="display: none;">
+            <h2>Contact Us</h2>
+            <p>Have a question or need support? Fill out the form below or reach out to us directly.</p>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Our Info</h3>
+                    <p><strong>Email:</strong> support@blizzard.tech</p>
+                    <p><strong>Phone:</strong> (800) 555-0199</p>
+                    <p><strong>Address:</strong><br>1 Blizzard Way<br>Icetown, North Pole 12345</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section id="newsletter">
+        <div class="newsletter-content">
+            <h3>Join The Ice Age</h3>
+            <p>Subscribe to our newsletter for the latest product releases, tech news, and exclusive deals.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Blizzard Tech. All rights reserved.</p>
+    </footer>
+
+    <nav class="mobile-bottom-nav">
+        <a href="#shop" class="nav-link nav-page-link" data-section="shop" aria-label="Home">
+            <img src="home-icon.png" alt="Home">
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-link" aria-label="Categories">
+            <img src="categories-icon.png" alt="Categories">
+            <span>Categories</span>
+        </a>
+        <a href="#" class="nav-link search-mobile-link" aria-label="Search">
+            <img src="search-icon.png" alt="Search">
+            <span>Search</span>
+        </a>
+        <a href="#cart" class="nav-link nav-page-link" data-section="cart" aria-label="Cart">
+            <img src="cart-icon.png" alt="Cart">
+            <span>Cart</span>
+        </a>
+         <a href="#blog" class="nav-link nav-page-link" data-section="blog" aria-label="Blog">
+            <img src="blog-icon.png" alt="Blog">
+            <span>Blog</span>
+        </a>
+        <a href="#account" class="nav-link nav-page-link" data-section="account" aria-label="My Account">
+            <img src="user-profile.png" alt="My Account">
+            <span>Account</span>
+        </a>
+    </nav>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
